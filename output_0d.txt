@@ -1,0 +1,258 @@
+Build mode: Release, optimization OFF
+Hardware threads (HW): 16
+
+========================================
+File: data_10k.txt
+Sample size: 10000 elements
+
+--- Operation: FastOp ---
+Conditions: minimum of 5 runs, warm-up run: yes, thread creation time is included.
+Speedup = time of 'No policy' / time of the row.
+
+Algorithm/Policy    Time (ms)      Speedup        Check
+--------------------------------------------------------
+1. No policy        0.0498         1.0000         OK
+2. seq              0.0498         1.0000         OK
+2. unseq            0.0497         1.0020         OK
+2. par              0.1178         0.4228         OK
+2. par_unseq        0.0974         0.5113         OK
+
+3. Custom algorithm (K threads):
+Threads (K)         Time (ms)      Speedup        Check
+--------------------------------------------------------
+K = 1               0.3683         0.1352         OK
+K = 2               0.4005         0.1243         OK
+K = 4               0.5747         0.0867         OK
+K = 8               0.9544         0.0522         OK
+K = 16              1.8084         0.0275         OK
+K = 32              3.3297         0.0150         OK
+K = 64              6.5575         0.0076         OK
+K = 128             13.7243        0.0036         OK
+K = 256             28.7874        0.0017         OK
+K = 512             62.9845        0.0008         OK
+--------------------------------------------------------
+Best K: 1
+Hardware threads (HW): 16
+Ratio (Best K / HW): 0.0625
+
+--- Operation: SlowOp ---
+Conditions: minimum of 5 runs, warm-up run: yes, thread creation time is included.
+Speedup = time of 'No policy' / time of the row.
+
+Algorithm/Policy    Time (ms)      Speedup        Check
+--------------------------------------------------------
+1. No policy        31.8226        1.0000         OK
+2. seq              31.6710        1.0048         OK
+2. unseq            31.9506        0.9960         OK
+2. par              7.4163         4.2909         OK
+2. par_unseq        7.2085         4.4146         OK
+
+3. Custom algorithm (K threads):
+Threads (K)         Time (ms)      Speedup        Check
+--------------------------------------------------------
+K = 1               32.3291        0.9843         OK
+K = 2               16.4615        1.9332         OK
+K = 4               8.7653         3.6305         OK
+K = 8               6.0131         5.2922         OK
+K = 16              5.6035         5.6791         OK
+K = 32              5.5572         5.7264         OK
+K = 64              7.3220         4.3462         OK
+K = 128             13.5535        2.3479         OK
+K = 256             28.4407        1.1189         OK
+K = 512             52.0263        0.6117         OK
+--------------------------------------------------------
+Best K: 32
+Hardware threads (HW): 16
+Ratio (Best K / HW): 2.0000
+
+========================================
+File: data_100k.txt
+Sample size: 100000 elements
+
+--- Operation: FastOp ---
+Conditions: minimum of 5 runs, warm-up run: yes, thread creation time is included.
+Speedup = time of 'No policy' / time of the row.
+
+Algorithm/Policy    Time (ms)      Speedup        Check
+--------------------------------------------------------
+1. No policy        0.4964         1.0000         OK
+2. seq              0.4971         0.9986         OK
+2. unseq            0.4962         1.0004         OK
+2. par              0.2578         1.9255         OK
+2. par_unseq        0.2589         1.9173         OK
+
+3. Custom algorithm (K threads):
+Threads (K)         Time (ms)      Speedup        Check
+--------------------------------------------------------
+K = 1               0.7508         0.6612         OK
+K = 2               0.6473         0.7669         OK
+K = 4               0.6469         0.7674         OK
+K = 8               0.9253         0.5365         OK
+K = 16              1.7622         0.2817         OK
+K = 32              3.4290         0.1448         OK
+K = 64              8.0094         0.0620         OK
+K = 128             13.0956        0.0379         OK
+K = 256             25.4511        0.0195         OK
+K = 512             52.0109        0.0095         OK
+--------------------------------------------------------
+Best K: 4
+Hardware threads (HW): 16
+Ratio (Best K / HW): 0.2500
+
+--- Operation: SlowOp ---
+Conditions: minimum of 5 runs, warm-up run: yes, thread creation time is included.
+Speedup = time of 'No policy' / time of the row.
+
+Algorithm/Policy    Time (ms)      Speedup        Check
+--------------------------------------------------------
+1. No policy        326.3582       1.0000         OK
+2. seq              327.0055       0.9980         OK
+2. unseq            325.3394       1.0031         OK
+2. par              36.8567        8.8548         OK
+2. par_unseq        27.3951        11.9130        OK
+
+3. Custom algorithm (K threads):
+Threads (K)         Time (ms)      Speedup        Check
+--------------------------------------------------------
+K = 1               324.8290       1.0047         OK
+K = 2               164.1933       1.9876         OK
+K = 4               90.3771        3.6111         OK
+K = 8               53.1115        6.1448         OK
+K = 16              29.5750        11.0349        OK
+K = 32              29.6915        10.9916        OK
+K = 64              31.0441        10.5127        OK
+K = 128             31.2729        10.4358        OK
+K = 256             34.8366        9.3683         OK
+K = 512             57.8494        5.6415         OK
+--------------------------------------------------------
+Best K: 16
+Hardware threads (HW): 16
+Ratio (Best K / HW): 1.0000
+
+========================================
+File: data_1m.txt
+Sample size: 1000000 elements
+
+--- Operation: FastOp ---
+Conditions: minimum of 5 runs, warm-up run: yes, thread creation time is included.
+Speedup = time of 'No policy' / time of the row.
+
+Algorithm/Policy    Time (ms)      Speedup        Check
+--------------------------------------------------------
+1. No policy        5.0564         1.0000         OK
+2. seq              5.0042         1.0104         OK
+2. unseq            5.1412         0.9835         OK
+2. par              1.6831         3.0042         OK
+2. par_unseq        1.6283         3.1053         OK
+
+3. Custom algorithm (K threads):
+Threads (K)         Time (ms)      Speedup        Check
+--------------------------------------------------------
+K = 1               5.5811         0.9060         OK
+K = 2               2.9770         1.6985         OK
+K = 4               2.1626         2.3381         OK
+K = 8               2.2169         2.2808         OK
+K = 16              2.3819         2.1228         OK
+K = 32              3.5179         1.4373         OK
+K = 64              6.5375         0.7734         OK
+K = 128             14.4393        0.3502         OK
+K = 256             27.2597        0.1855         OK
+K = 512             51.5159        0.0982         OK
+--------------------------------------------------------
+Best K: 4
+Hardware threads (HW): 16
+Ratio (Best K / HW): 0.2500
+
+--- Operation: SlowOp ---
+Conditions: minimum of 2 runs, warm-up run: no, thread creation time is included.
+Speedup = time of 'No policy' / time of the row.
+
+Algorithm/Policy    Time (ms)      Speedup        Check
+--------------------------------------------------------
+1. No policy        3190.4128      1.0000         OK
+2. seq              3195.6500      0.9984         OK
+2. unseq            3190.8575      0.9999         OK
+2. par              271.2223       11.7631        OK
+2. par_unseq        268.6816       11.8743        OK
+
+3. Custom algorithm (K threads):
+Threads (K)         Time (ms)      Speedup        Check
+--------------------------------------------------------
+K = 1               3199.3417      0.9972         OK
+K = 2               1696.7566      1.8803         OK
+K = 4               965.4946       3.3044         OK
+K = 8               514.1468       6.2053         OK
+K = 16              281.3589       11.3393        OK
+K = 32              288.4743       11.0596        OK
+K = 64              277.7367       11.4872        OK
+K = 128             289.2238       11.0309        OK
+K = 256             284.5304       11.2129        OK
+K = 512             295.7781       10.7865        OK
+--------------------------------------------------------
+Best K: 64
+Hardware threads (HW): 16
+Ratio (Best K / HW): 4.0000
+
+========================================
+File: data_10m.txt
+Sample size: 10000000 elements
+
+--- Operation: FastOp ---
+Conditions: minimum of 5 runs, warm-up run: yes, thread creation time is included.
+Speedup = time of 'No policy' / time of the row.
+
+Algorithm/Policy    Time (ms)      Speedup        Check
+--------------------------------------------------------
+1. No policy        54.7078        1.0000         OK
+2. seq              51.3251        1.0659         OK
+2. unseq            51.1904        1.0687         OK
+2. par              16.5779        3.3000         OK
+2. par_unseq        16.3623        3.3435         OK
+
+3. Custom algorithm (K threads):
+Threads (K)         Time (ms)      Speedup        Check
+--------------------------------------------------------
+K = 1               51.6082        1.0601         OK
+K = 2               28.3726        1.9282         OK
+K = 4               20.0393        2.7300         OK
+K = 8               16.9065        3.2359         OK
+K = 16              17.5667        3.1143         OK
+K = 32              18.2300        3.0010         OK
+K = 64              18.8820        2.8974         OK
+K = 128             19.7394        2.7715         OK
+K = 256             29.9040        1.8294         OK
+K = 512             55.0448        0.9939         OK
+--------------------------------------------------------
+Best K: 8
+Hardware threads (HW): 16
+Ratio (Best K / HW): 0.5000
+
+--- Operation: SlowOp ---
+Conditions: minimum of 2 runs, warm-up run: no, thread creation time is included.
+Speedup = time of 'No policy' / time of the row.
+
+Algorithm/Policy    Time (ms)      Speedup        Check
+--------------------------------------------------------
+1. No policy        32041.9294     1.0000         OK
+2. seq              32145.0969     0.9968         OK
+2. unseq            23840.0653     1.3440         OK
+2. par              2414.5878      13.2701        OK
+2. par_unseq        2402.3737      13.3376        OK
+
+3. Custom algorithm (K threads):
+Threads (K)         Time (ms)      Speedup        Check
+--------------------------------------------------------
+K = 1               32354.2943     0.9903         OK
+K = 2               17247.2374     1.8578         OK
+K = 4               9209.0315      3.4794         OK
+K = 8               5035.8675      6.3627         OK
+K = 16              2699.6626      11.8689        OK
+K = 32              2777.2522      11.5373        OK
+K = 64              2930.2029      10.9351        OK
+K = 128             2845.2213      11.2617        OK
+K = 256             2739.6981      11.6954        OK
+K = 512             2757.5015      11.6199        OK
+--------------------------------------------------------
+Best K: 16
+Hardware threads (HW): 16
+Ratio (Best K / HW): 1.0000
